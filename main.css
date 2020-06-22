@@ -48,6 +48,7 @@ section a:link, a:visited{
     height: 125px;
     border: 5px solid black;
     border-radius: 50%;
+    color: black;
     text-align: center;
     text-decoration: none;
 }
@@ -55,7 +56,6 @@ section a:link, a:visited{
 section a:hover {
     border-color: rgb(175, 75, 65);
     color: rgb(175, 75, 65);
-    
 }
 
 
