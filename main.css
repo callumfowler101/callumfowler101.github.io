@@ -24,16 +24,14 @@ nav ul {
     flex-direction: row-reverse;
 }
 
-a:link, a:visited {
+nav a:link, a:visited {
     color: black;
-    display: inline-block;
     padding: 5px;
     text-decoration: none;
 }
 
-a:hover {
+nav a:hover {
     color: rgb(175, 75, 65);
-    display: inline-block;
 }
 
 section{
@@ -42,11 +40,26 @@ section{
     flex-direction: row;
 }
 
-section div{
-    padding: 5px;
+section a:link, a:visited{
+    font-size: 25px;
     margin: auto;
+    padding-top: 75px;
+    width: 200px;
+    height: 125px;
+    border: 5px solid black;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
 }
 
+section a:hover {
+    border-color: rgb(175, 75, 65);
+    color: rgb(175, 75, 65);
+    
+}
+
+
 footer{
-    font-size: 10px;
+    text-align: center;
+    font-size: 15px;
 }
