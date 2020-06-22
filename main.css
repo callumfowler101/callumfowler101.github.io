@@ -1,0 +1,48 @@
+body {
+    background: rgb(80,180,190);
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    text-transform: lowercase;
+}
+
+header{
+    text-align: left;
+}
+
+h1 {
+    color: rgb(175, 75, 65);
+    stroke-width: 5px;
+    font-size: 60px;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+a:link, a:visited {
+    color: black;
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(175, 75, 65);
+    display: inline-block;
+}
+
+section{
+    padding: 100px 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+section div{
+    padding: 5px;
+    margin: auto;
+}
