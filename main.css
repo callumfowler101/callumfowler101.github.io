@@ -27,6 +27,15 @@ nav ul {
     font-size: 18px;
 }
 
+nav ul.page {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+}
+
 nav a:link, a:visited {
     color: black;
     padding: 5px;
@@ -72,20 +81,30 @@ section.grid_box{
     grid-template-columns: 400px 400px;
     grid-template-rows: 300px 100px;
     justify-content: center;
-    
+    grid-template-areas: "img sec_main" "img sec_foot";
+}
+
+section.grid_box2{
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: 300px 100px;
+    justify-content: center;
+    grid-template-areas: "sec_main img" "sec_foot img";
 }
 
 section img.grid_sec1{
     height: 400px;
     width: 400px;
-    grid-row: 1/3;
+    grid-area: img;
 }
 section div.grid_sec2{
     background-color: rgb(175, 75, 65);
+    grid-area: sec_main;
 
 }
 section div.grid_sec3{
     background-color: black;
+    grid-area: sec_foot;
 }
 
 section h2.main{
@@ -143,12 +162,15 @@ footer{
         grid-template-columns: 400px;
         grid-template-rows: 400px 175px 80px;
         justify-content: center;
+        grid-template-areas: "img" "sec_main" "sec_foot";
     }
 
-    section img.grid_sec1{
-        height: 400px;
-        width: 400px;
-        grid-row: 1;
+    section.grid_box2{
+        display: grid;
+        grid-template-columns: 400px;
+        grid-template-rows: 400px 175px 80px;
+        justify-content: center;
+        grid-template-areas: "img" "sec_main" "sec_foot";
     }
 }
 
