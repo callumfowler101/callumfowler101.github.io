@@ -33,12 +33,13 @@ nav ul.page {
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     font-size: 18px;
 }
 
 nav a:link, a:visited {
     color: black;
-    padding: 5px;
+    padding: 10px;
     text-decoration: none;
 }
 
@@ -48,6 +49,13 @@ nav a:hover {
 
 p{
     font-size: 20px;;
+}
+
+li{
+    list-style-type: none;
+    margin: none;
+    padding: 10px 0px;
+    font-size: 18px;
 }
 
 section{
@@ -144,7 +152,7 @@ section a.sub:hover {
 /* Footer */
 
 footer{
-    padding-top: 150px;
+    padding-top: 125px;
     text-align: center;
     font-size: 15px;
 }
