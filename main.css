@@ -144,11 +144,16 @@ section a.sub:hover {
 /* Footer */
 
 footer{
-    padding-top: 100px;
+    padding-top: 150px;
     text-align: center;
     font-size: 15px;
 }
 
+footer.big_pad{
+    padding-top: 300px;
+    text-align: center;
+    font-size: 15px;
+}
 
 /* Responsive Design */
 
