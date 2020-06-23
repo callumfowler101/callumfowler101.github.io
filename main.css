@@ -66,6 +66,7 @@ section.grid_box{
     display: grid;
     grid-template-columns: 300px 300px;
     grid-template-rows: 250px 50px;
+    justify-content: center;
     
 }
 
@@ -117,6 +118,19 @@ footer{
 @media screen and (max-width: 650px){
     section{
         flex-direction: column;
+    }
+
+    section.grid_box{
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: 300px 175px 50px;
+        justify-content: center;
+    }
+
+    section img.grid_sec1{
+        height: 300px;
+        width: 300px;
+        grid-row: 1;
     }
 }
 
