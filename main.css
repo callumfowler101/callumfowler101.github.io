@@ -28,22 +28,18 @@ nav ul {
 }
 
 nav ul.page {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     font-size: 18px;
 }
 
-nav a:link, a:visited {
+nav ul a:link, a:visited {
     color: black;
     padding: 10px;
     text-decoration: none;
 }
 
-nav a:hover {
+nav ul a:hover {
     color: rgb(175, 75, 65);
 }
 
