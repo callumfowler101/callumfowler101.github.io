@@ -18,7 +18,7 @@ h1 {
     padding: 0px;
 }
 
-nav ul {
+nav ul.global{
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -28,6 +28,10 @@ nav ul {
 }
 
 nav ul.page {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     font-size: 18px;
@@ -60,7 +64,7 @@ section{
     flex-direction: row;
 }
 
-section a:link, a:visited{
+a.main:link, a.main:visited{
     font-size: 35px;
     margin: 10px auto;
     padding-top: 100px;
@@ -73,7 +77,7 @@ section a:link, a:visited{
     text-decoration: none;
 }
 
-section a:hover {
+section a.main:hover {
     border-color: rgb(175, 75, 65);
     color: rgb(175, 75, 65);
 }
@@ -96,22 +100,22 @@ section.grid_box2{
     grid-template-areas: "sec_main img" "sec_foot img";
 }
 
-section img.grid_sec1{
+img.grid_sec1{
     height: 400px;
     width: 400px;
     grid-area: img;
 }
-section div.grid_sec2{
+div.grid_sec2{
     background-color: rgb(175, 75, 65);
     grid-area: sec_main;
 
 }
-section div.grid_sec3{
+div.grid_sec3{
     background-color: black;
     grid-area: sec_foot;
 }
 
-section h2.main{
+div.grid_sec2 h2{
     font-size: 18px;
     margin-top: 0px;
     padding: 5px;
@@ -119,29 +123,30 @@ section h2.main{
     color: black;
 }
 
-section p.main{
+div.grid_sec2 p{
     font-size: 14px;
     padding: 0px 5px;
     text-transform: none;
     color: black;
 }
 
-section p.sub{
+div.grid_sec3 p{
     font-size: 12px;
     padding: 0px 5px;
     margin: none;
     color: white;
 }
 
-section a.sub{
+div.grid_sec3 a.white:link, a.white:visited{
     font-size: 12px;
     padding: 0px 5px;
     margin: none;
     border: none;
     color: white;
+    text-decoration: none;
 }
 
-section a.sub:hover {
+div.grid_sec3 a:hover {
     color: rgb(175, 75, 65);
 }
 
@@ -166,11 +171,12 @@ footer.big_pad{
         text-align: center;
     }
 
-    p{
+    header p{
+        margin: 0px 10px;
         text-align: justify;
     }
 
-    section{
+    section.main{
         flex-direction: column;
     }
 
@@ -190,8 +196,11 @@ footer.big_pad{
         grid-template-areas: "img" "sec_main" "sec_foot";
     }
 
-    nav ul{
+    nav ul.global{
         justify-content: space-around;
+    }
+    nav ul.page{
+        justify-content: center;
     }
 }
 
