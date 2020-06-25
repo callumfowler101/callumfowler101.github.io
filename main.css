@@ -162,6 +162,14 @@ footer.big_pad{
 /* Responsive Design */
 
 @media screen and (max-width: 800px){
+    h1{
+        text-align: center;
+    }
+
+    p{
+        text-align: justify;
+    }
+
     section{
         flex-direction: column;
     }
@@ -180,6 +188,10 @@ footer.big_pad{
         grid-template-rows: 400px 175px 80px;
         justify-content: center;
         grid-template-areas: "img" "sec_main" "sec_foot";
+    }
+
+    nav ul{
+        justify-content: space-around;
     }
 }
 
