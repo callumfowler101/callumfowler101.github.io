@@ -1,18 +1,18 @@
 let cells = [];
 let numOfCells;
 let cellSz, cellOffset;
-let docSz;
-let cns = document.getElementById('sketch1');
+let canvas, docSz;
+let div_grid = document.getElementById('sketch1');
 let noScroll;
 
 function setup(){
-    docSz = cns.clientWidth-5;
+    docSz = div_grid.clientWidth-5;
     canvas = createCanvas(docSz, docSz);
-    canvas.position(cns.offsetLeft+2.5, cns.offsetTop);
+    canvas.position(div_grid.offsetLeft+2.5, div_grid.offsetTop);
     noScroll = false;
     
     
-    numOfCells = 30;
+    numOfCells = floor(random(5,30));
     cellSz = docSz/numOfCells;
     cellOffset = cellSz*0.5;
    
@@ -26,7 +26,7 @@ function setup(){
 }
 
 function windowResized(){
-    canvas.position(cns.offsetLeft+2.5, cns.offsetTop);
+    canvas.position(div_grid.offsetLeft+2.5, div_grid.offsetTop);
 }
 
 function draw(){
@@ -67,12 +67,12 @@ function flip(){
     if(rand<0.3){
         cells[centreCell].growth = true;
         return;
-    } else if (rand<0.6){
+    } else if (rand<0.7){
         cells[centreCell].growth = true;
         cells[centreCell+numOfCells+4].growth = true;
         cells[centreCell-numOfCells-4].growth = true;
         return;
-    } else if (rand<0.95){
+    } else if (rand<0.9){
         cells[centreCell].growth = true;
         cells[centreCell+1].growth = true;
         cells[centreCell-1].growth = true;
@@ -89,10 +89,10 @@ class Cell {
         this.y = y;
         this.sz = 0;
         this.maxSz = sz;
-        this.col = color(x, 180, y);
+        this.col = color(x, y, 170) ;
         this.sin = -0.5;
         this.growth = false;
-        this.speed = random(0.01,0.05);
+        this.speed = random(0.001,0.004)*numOfCells;
     }
 
     grow(){  // need to try and grow and shrink
