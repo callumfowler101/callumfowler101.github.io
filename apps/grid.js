@@ -3,18 +3,19 @@ let numOfCells;
 let cellSz, cellOffset;
 let docSz;
 let cns = document.getElementById('sketch1');
+let noScroll;
 
 function setup(){
     docSz = cns.clientWidth-5;
     canvas = createCanvas(docSz, docSz);
     canvas.position(cns.offsetLeft+2.5, cns.offsetTop);
+    noScroll = false;
     
     
     numOfCells = 30;
     cellSz = docSz/numOfCells;
     cellOffset = cellSz*0.5;
    
-    
     rectMode(CENTER);
     for(let i=-2; i<numOfCells+2; i++){
         for(let j=-2; j<numOfCells+2; j++){
@@ -30,7 +31,22 @@ function windowResized(){
 
 function draw(){
     background(0);
-    if(mouseIsPressed && mouseX>-1 && mouseX<docSz+1 && mouseY>-1 && mouseY<docSz+1) flip();
+    // trigger mouseEvents and disable scrool
+    if(mouseX>-1 && mouseX<docSz+1 && mouseY>-1 && mouseY<docSz+1){
+        disableScroll();
+        if(mouseIsPressed){
+            if(!noScroll){
+                noScroll = true;
+                flip();
+            } else {
+                if(noScroll) noScroll = false;
+            }
+        }
+    } else {
+        enableScroll();
+    }
+
+    //draw cubes
     for(let i=0; i<cells.length; i++){
         cells[i].grow()
         cells[i].display();
@@ -95,4 +111,15 @@ class Cell {
         fill(this.col);
         rect(this.x, this.y, this.sz, this.sz);
     }
+}
+
+
+function disableScroll(){
+    var x=window.scrollX;
+    var y=window.scrollY;
+    window.onscroll=function(){window.scrollTo(x, y);};
+}
+
+function enableScroll(){
+    window.onscroll=function(){};
 }
