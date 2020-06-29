@@ -154,8 +154,8 @@ div.grid_sec3 a:hover {
 
 section.intApp{
     display: grid;
-    grid-template-columns: 400px;
-    grid-template-rows: 50px 400px;
+    grid-template-columns: 500px;
+    grid-template-rows: 50px 500px;
     justify-content: center;
     grid-template-areas: "title" "app";
 }
@@ -166,7 +166,7 @@ div.h{
 }
 
 div.h h2{
-    font-size: 18px;
+    font-size: 32px;
     margin-top: 0px;
     padding: 5px;
     text-transform: none;
@@ -176,8 +176,8 @@ div.h h2{
 
 div.sketch{
     background: black;
-    height: 400px;
-    width: 400px;
+    height: 500px;
+    width: 500px;
     grid-area: app;
 }
 
@@ -233,6 +233,20 @@ footer.big_pad{
     }
     nav ul.page{
         justify-content: center;
+    }
+
+    section.intApp{
+        grid-template-columns: 400px;
+        grid-template-rows: 50px 400px;
+    }
+
+    div.h h2{
+        font-size: 26px;
+    }
+    
+    div.sketch{
+        height: 400px;
+        width: 400px;
     }
 }
 

@@ -1,11 +1,12 @@
-let cells = [];
-let numOfCells;
-let cellSz, cellOffset;
-let canvas, docSz;
-let div_grid = document.getElementById('sketch1');
-let noScroll;
+const div_grid = document.getElementById('sketch1');
+let canvas, docSz, noScroll;
+
+let cells;
+let numOfCells, cellSz, cellOffset;
+
 
 function setup(){
+    cells = [];
     docSz = div_grid.clientWidth-5;
     canvas = createCanvas(docSz, docSz);
     canvas.position(div_grid.offsetLeft+2.5, div_grid.offsetTop);
@@ -26,7 +27,7 @@ function setup(){
 }
 
 function windowResized(){
-    canvas.position(div_grid.offsetLeft+2.5, div_grid.offsetTop);
+    setup();
 }
 
 function draw(){
@@ -51,6 +52,8 @@ function draw(){
         cells[i].grow()
         cells[i].display();
     }
+
+    console.log(frameRate());
 }
 
 function flip(){
