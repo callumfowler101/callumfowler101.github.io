@@ -150,6 +150,37 @@ div.grid_sec3 a:hover {
     color: rgb(175, 75, 65);
 }
 
+/* Grid layout for interaction */
+
+section.intApp{
+    display: grid;
+    grid-template-columns: 400px;
+    grid-template-rows: 50px 400px;
+    justify-content: center;
+    grid-template-areas: "title" "app";
+}
+
+div.h{
+    background: black;
+    grid-area: title;
+}
+
+div.h h2{
+    font-size: 18px;
+    margin-top: 0px;
+    padding: 5px;
+    text-transform: none;
+    color: rgb(80,180,190);
+}
+
+
+div.sketch{
+    background: black;
+    height: 400px;
+    width: 400px;
+    grid-area: app;
+}
+
 /* Footer */
 
 footer{
@@ -172,8 +203,9 @@ footer.big_pad{
     }
 
     header p{
-        margin: 0px 10px;
+        margin: auto;
         text-align: justify;
+        justify-content: center;
     }
 
     section.main{
