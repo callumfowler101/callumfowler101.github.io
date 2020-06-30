@@ -118,11 +118,13 @@ class Cell {
 
 
 function disableScroll(){
-    // var x=window.scrollX;
-    // var y=window.scrollY;
-    // window.onscroll=function(){window.scrollTo(x, y);};
+    document.body.addEventListener('touchmove', preventDefault, { passive: false });
 }
 
 function enableScroll(){
-    // window.onscroll=function(){};
+    document.body.removeEventListener('touchmove', preventDefault, { passive: false });
+}
+
+function preventDefault(e){
+    e.preventDefault();
 }
