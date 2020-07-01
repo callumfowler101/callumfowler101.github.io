@@ -1,5 +1,5 @@
 const web_style = document.getElementById('sketch1');
-let canvas, docSz, noScroll;
+let docSz;
 
 let cells;
 let numOfCells, cellSz, cellOffset;
@@ -7,9 +7,8 @@ let numOfCells, cellSz, cellOffset;
 function setup(){
     cells = [];
     docSz = web_style.clientWidth-5;
-    canvas = createCanvas(docSz, docSz);
+    let canvas = createCanvas(docSz, docSz);
     canvas.position(web_style.offsetLeft+2.5, web_style.offsetTop);
-    noScroll = false;
     
     numOfCells = floor(random(5,30));
     cellSz = docSz/numOfCells;
@@ -34,12 +33,7 @@ function draw(){
     if(mouseX>-1 && mouseX<docSz+1 && mouseY>-1 && mouseY<docSz+1){
         disableScroll();
         if(mouseIsPressed){
-            if(!noScroll){
-                noScroll = true;
-                flip();
-            } else {
-                if(noScroll) noScroll = false;
-            }
+            flip();
         }
     } else {
         enableScroll();
@@ -124,3 +118,4 @@ function enableScroll(){
 function preventDefault(e){
     e.preventDefault();
 }
+
