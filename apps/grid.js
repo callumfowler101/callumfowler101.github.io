@@ -1,17 +1,15 @@
-const div_grid = document.getElementById('sketch1');
+const web_style = document.getElementById('sketch1');
 let canvas, docSz, noScroll;
 
 let cells;
 let numOfCells, cellSz, cellOffset;
 
-
 function setup(){
     cells = [];
-    docSz = div_grid.clientWidth-5;
+    docSz = web_style.clientWidth-5;
     canvas = createCanvas(docSz, docSz);
-    canvas.position(div_grid.offsetLeft+2.5, div_grid.offsetTop);
+    canvas.position(web_style.offsetLeft+2.5, web_style.offsetTop);
     noScroll = false;
-    
     
     numOfCells = floor(random(5,30));
     cellSz = docSz/numOfCells;
@@ -52,8 +50,6 @@ function draw(){
         cells[i].grow()
         cells[i].display();
     }
-
-    console.log(frameRate());
 }
 
 function flip(){
@@ -98,7 +94,7 @@ class Cell {
         this.speed = random(0.001,0.004)*numOfCells;
     }
 
-    grow(){  // need to try and grow and shrink
+    grow(){ 
         if(this.growth){
             let sinVal = (sin(this.sin)+1)*0.4;
             this.sz = sinVal*this.maxSz;
