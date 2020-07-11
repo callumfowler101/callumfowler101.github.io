@@ -89,6 +89,29 @@ section a.main:hover {
     color: rgb(175, 75, 65);
 }
 
+/* Image Carousel on Home */
+.carousel{
+    width: 400px;
+    margin: auto;
+    text-align: center;
+}
+
+.carousel-container{
+    overflow: hidden;
+    border: 5px solid black;
+}
+
+.carousel-slide{
+    display: flex;
+    width: 400px;
+    height: 400px;
+}
+
+.carousel-slide:hover{
+    background: rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
 /* Grid layout for Portfolio */
 
 section.grid_box{

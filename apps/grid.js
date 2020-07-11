@@ -1,121 +1,125 @@
-const web_style = document.getElementById('sketch1');
-let docSz;
+let sketch = function(o){
+    o.web_style = document.getElementById('sketch1');
+    o.docSz;
 
-let cells;
-let numOfCells, cellSz, cellOffset;
+    o.cells;
+    o.numOfCells;
+    o.cellSz;
+    o.cellOffset;
 
-function setup(){
-    cells = [];
-    docSz = web_style.clientWidth-5;
-    let canvas = createCanvas(docSz, docSz);
-    canvas.position(web_style.offsetLeft+2.5, web_style.offsetTop);
+    o.setup() = () => {
+        o.cells = [];
+        o.docSz = o.web_style.clientWidth-5;
+        let canvas = o.createCanvas(o.docSz, o.docSz);
+        canvas.position(o.web_style.offsetLeft+2.5, o.web_style.offsetTop);
+        
+        o.numOfCells = o.floor(o.random(5,30));
+        o.cellSz = o.docSz/o.numOfCells;
+        o.cellOffset = o.cellSz*0.5;
     
-    numOfCells = floor(random(5,30));
-    cellSz = docSz/numOfCells;
-    cellOffset = cellSz*0.5;
-   
-    rectMode(CENTER);
-    for(let i=-2; i<numOfCells+2; i++){
-        for(let j=-2; j<numOfCells+2; j++){
-            let c = new Cell(i*cellSz+cellOffset, j*cellSz+cellOffset, cellSz);
-            cells.push(c);
+        o.rectMode(CENTER);
+        for(let i=-2; i<o.numOfCells+2; i++){
+            for(let j=-2; j<o.numOfCells+2; j++){
+                let c = new Cell(i*o.cellSz+o.cellOffset, j*o.cellSz+o.cellOffset, o.cellSz);
+                o.cells.push(c);
+            }
         }
     }
-}
 
-function windowResized(){
-    setup();
-}
+    o.windowResized() = () => {
+        o.setup();
+    }
 
-function draw(){
-    background(0);
-    // trigger mouseEvents and disable scrool
-    if(mouseX>-1 && mouseX<docSz+1 && mouseY>-1 && mouseY<docSz+1){
-        disableScroll();
-        if(mouseIsPressed){
-            flip();
+    o.draw() = () => {
+        o.background(0);
+        // trigger mouseEvents and disable scrool
+        if(o.mouseX>-1 && o.mouseX<o.docSz+1 && o.mouseY>-1 && o.mouseY<o.docSz+1){
+            o.disableScroll();
+            if(o.mouseIsPressed){
+                o.flip();
+            }
+        } else {
+            o.enableScroll();
         }
-    } else {
-        enableScroll();
+
+        //draw cubes
+        for(let i=0; i<cells.length; i++){
+            o.cells[i].grow()
+            o.cells[i].display();
+        }
     }
 
-    //draw cubes
-    for(let i=0; i<cells.length; i++){
-        cells[i].grow()
-        cells[i].display();
-    }
-}
-
-function flip(){
-    let x = floor(map(mouseX, 0, docSz, 0, numOfCells))*cellSz+cellOffset;
-    let y = floor(map(mouseY, 0, docSz, 0, numOfCells))*cellSz+cellOffset;
-    let centreCell;
-    for(let i=0; i<cells.length; i++){
-        if(cells[i].x == x && cells[i].y == y){
-            centreCell = i;
-        } 
-    }
-
-    let rand = random(1);
-    if(rand<0.3){
-        cells[centreCell].growth = true;
-        return;
-    } else if (rand<0.7){
-        cells[centreCell].growth = true;
-        cells[centreCell+numOfCells+4].growth = true;
-        cells[centreCell-numOfCells-4].growth = true;
-        return;
-    } else if (rand<0.9){
-        cells[centreCell].growth = true;
-        cells[centreCell+1].growth = true;
-        cells[centreCell-1].growth = true;
-        return;
-    } else {
-        cells[cells.length-centreCell].growth = true;
-        return;
-    }
-}
-
-class Cell {
-    constructor(x,y,sz){
-        this.x = x;
-        this.y = y;
-        this.sz = 0;
-        this.maxSz = sz;
-        this.col = color(x, y, 170) ;
-        this.sin = -0.5;
-        this.growth = false;
-        this.speed = random(0.001,0.004)*numOfCells;
-    }
-
-    grow(){ 
-        if(this.growth){
-            let sinVal = (sin(this.sin)+1)*0.4;
-            this.sz = sinVal*this.maxSz;
-            this.sin+=this.speed;
-            if(this.sz<1){
-                this.sin = 0;
-                this.growth = false;
+    o.flip() = () => {
+        let x = floor(map(o.mouseX, 0, o.docSz, 0, o.numOfCells))*o.cellSz+o.cellOffset;
+        let y = floor(map(o.mouseY, 0, o.docSz, 0, o.numOfCells))*o.cellSz+o.cellOffset;
+        let centreCell;
+        for(let i=0; i<o.cells.length; i++){
+            if(o.cells[i].x == x && o.cells[i].y == y){
+                centreCell = i;
             } 
         }
+
+        let rand = o.random(1);
+        if(rand<0.3){
+            o.cells[centreCell].growth = true;
+            return;
+        } else if (rand<0.7){
+            o.cells[centreCell].growth = true;
+            o.cells[centreCell+numOfCells+4].growth = true;
+            o.cells[centreCell-numOfCells-4].growth = true;
+            return;
+        } else if (rand<0.9){
+            o.cells[centreCell].growth = true;
+            o.cells[centreCell+1].growth = true;
+            o.cells[centreCell-1].growth = true;
+            return;
+        } else {
+            o.cells[cells.length-centreCell].growth = true;
+            return;
+        }
     }
 
-    display(){
-        fill(this.col);
-        rect(this.x, this.y, this.sz, this.sz);
+    class Cell {
+        constructor(x,y,sz){
+            this.x = x;
+            this.y = y;
+            this.sz = 0;
+            this.maxSz = sz;
+            this.col = o.color(x, y, 170) ;
+            this.sin = -0.5;
+            this.growth = false;
+            this.speed = random(0.001,0.004)*o.numOfCells;
+        }
+
+        grow(){ 
+            if(this.growth){
+                let sinVal = (o.sin(this.sin)+1)*0.4;
+                this.sz = sinVal*this.maxSz;
+                this.sin+=this.speed;
+                if(this.sz<1){
+                    this.sin = 0;
+                    this.growth = false;
+                } 
+            }
+        }
+
+        display(){
+            o.fill(this.col);
+            o.rect(this.x, this.y, this.sz, this.sz);
+        }
+    }
+
+    o.disableScroll() = () => {
+        document.body.addEventListener('touchmove', preventDefault, { passive: false });
+    }
+
+    o.enableScroll() = () => {
+        document.body.removeEventListener('touchmove', preventDefault, { passive: false });
+    }
+
+    o.preventDefault(e) = () => {
+        e.preventDefault();
     }
 }
 
-
-function disableScroll(){
-    document.body.addEventListener('touchmove', preventDefault, { passive: false });
-}
-
-function enableScroll(){
-    document.body.removeEventListener('touchmove', preventDefault, { passive: false });
-}
-
-function preventDefault(e){
-    e.preventDefault();
-}
-
+let grid = new p5(sketch);
