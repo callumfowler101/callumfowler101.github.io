@@ -278,6 +278,10 @@ footer.big_pad{
         height: 400px;
         width: 400px;
     }
+
+    .carousel{
+        display: none;
+    }
 }
 
 
