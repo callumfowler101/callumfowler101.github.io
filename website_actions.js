@@ -22,11 +22,17 @@ carouselSlide.addEventListener('transitionend', ()=>{
         counter = carouselImages.length - counter;
         carouselSlide.style.transform = 'translateX(' + (-size*counter) + 'px)';
     }
-})
+});
+
+let hover;
+carouselSlide.addEventListener('mouseenter', ()=>{hover = true;});
+carouselSlide.addEventListener('mouseleave', ()=>{hover = false;});
 
 setInterval(()=>{
+    if(hover) return;
     if(counter>=carouselImages.length-1) return;
     carouselSlide.style.transition = 'transform 1.25s ease-in-out';
     counter++;
     carouselSlide.style.transform = 'translateX(' + (-size*counter) + 'px)';
 }, 5000);
+

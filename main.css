@@ -99,6 +99,7 @@ section a.main:hover {
 .carousel-container{
     overflow: hidden;
     border: 5px solid black;
+    background: black;
 }
 
 .carousel-slide{
@@ -107,9 +108,8 @@ section a.main:hover {
     height: 400px;
 }
 
-.carousel-slide:hover{
-    background: rgba(0,0,0,0.2);
-    z-index: 1;
+.carousel-slide img:hover{
+    opacity: 0.4;
 }
 
 /* Grid layout for Portfolio */
