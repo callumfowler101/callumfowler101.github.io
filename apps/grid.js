@@ -1,4 +1,4 @@
-let sketch = function(o){
+let sketch1 = function(o){
     o.web_style = document.getElementById('sketch1');
     o.docSz;
 
@@ -122,4 +122,4 @@ let sketch = function(o){
     }
 }
 
-let grid = new p5(sketch);
+let grid = new p5(sketch1);
