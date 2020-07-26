@@ -1,4 +1,4 @@
-let sketch1 = function(o){
+let sketch1 = (o) => {
     o.web_style = document.getElementById('sketch1');
     o.docSz;
 
