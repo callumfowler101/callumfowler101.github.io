@@ -112,6 +112,13 @@ section a.main:hover {
     opacity: 0.4;
 }
 
+.carousel-slide-text{
+    position: absolute;
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
 /* Grid layout for Portfolio */
 
 section.grid_box{
