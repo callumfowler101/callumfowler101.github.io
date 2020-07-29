@@ -251,16 +251,16 @@ footer.big_pad{
 
     section.grid_box{
         display: grid;
-        grid-template-columns: 500px;
-        grid-template-rows: 500px 300px 80px;
+        grid-template-columns: 400px;
+        grid-template-rows: 400px 350px 80px;
         justify-content: center;
         grid-template-areas: "img" "sec_main" "sec_foot";
     }
 
     section.grid_box2{
         display: grid;
-        grid-template-columns: 500px;
-        grid-template-rows: 500px 350px 80px;
+        grid-template-columns: 400px;
+        grid-template-rows: 400px 350px 80px;
         justify-content: center;
         grid-template-areas: "img" "sec_main" "sec_foot";
     }
