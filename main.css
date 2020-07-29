@@ -91,6 +91,7 @@ section a.main:hover {
 
 /* Image Carousel on Home */
 .carousel{
+    display: none;
     width: 400px;
     margin: auto;
     text-align: center;
@@ -112,34 +113,35 @@ section a.main:hover {
     opacity: 0.4;
 }
 
-.carousel-slide-text{
+.carousel-slide p{
     position: absolute;
     background-color: black;
     color: white;
     width: 100%;
+    height: 100%;
 }
 
 /* Grid layout for Portfolio */
 
 section.grid_box{
     display: grid;
-    grid-template-columns: 400px 400px;
-    grid-template-rows: 300px 100px;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 400px 100px;
     justify-content: center;
     grid-template-areas: "img sec_main" "img sec_foot";
 }
 
 section.grid_box2{
     display: grid;
-    grid-template-columns: 400px 400px;
-    grid-template-rows: 300px 100px;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 400px 100px;
     justify-content: center;
     grid-template-areas: "sec_main img" "sec_foot img";
 }
 
 img.grid_sec1{
-    height: 400px;
-    width: 400px;
+    height: 500px;
+    width: 500px;
     grid-area: img;
 }
 div.grid_sec2{
@@ -249,16 +251,16 @@ footer.big_pad{
 
     section.grid_box{
         display: grid;
-        grid-template-columns: 400px;
-        grid-template-rows: 400px 175px 80px;
+        grid-template-columns: 500px;
+        grid-template-rows: 500px 300px 80px;
         justify-content: center;
         grid-template-areas: "img" "sec_main" "sec_foot";
     }
 
     section.grid_box2{
         display: grid;
-        grid-template-columns: 400px;
-        grid-template-rows: 400px 175px 80px;
+        grid-template-columns: 500px;
+        grid-template-rows: 500px 350px 80px;
         justify-content: center;
         grid-template-areas: "img" "sec_main" "sec_foot";
     }

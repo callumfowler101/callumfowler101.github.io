@@ -1,5 +1,6 @@
 const carouselSlide = document.querySelector('.carousel-slide');
 const carouselImages = document.querySelectorAll('.carousel-slide img');
+const carouselText = document.querySelectorAll('carousel-slide p');
 
 const prevBtn = document.querySelector('#prevBtn');
 const nextBtn = document.querySelector('#nextBtn');
@@ -10,6 +11,10 @@ const size = 400;
 // when i have all images the same size i need to do: const size = carouselImages[0].clientWidth
 
 carouselSlide.style.transform = 'translateX(' + (-size*counter) + 'px)';
+
+for(let i=0; i<carouselText.length; i++){
+    carouselText[i].style.left = i*size;
+}
 
 carouselSlide.addEventListener('transitionend', ()=>{
     if(carouselImages[counter].id === 'lastClone'){
@@ -35,4 +40,4 @@ setInterval(()=>{
     counter++;
     carouselSlide.style.transform = 'translateX(' + (-size*counter) + 'px)';
 }, 5000);
-
+ 
