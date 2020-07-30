@@ -249,10 +249,15 @@ footer.big_pad{
         flex-direction: column;
     }
 
+    img.grid_sec1{
+        height: 400px;
+        width: 400px;
+    }
+
     section.grid_box{
         display: grid;
         grid-template-columns: 400px;
-        grid-template-rows: 400px 350px 80px;
+        grid-template-rows: 400px 400px 80px;
         justify-content: center;
         grid-template-areas: "img" "sec_main" "sec_foot";
     }
@@ -260,7 +265,7 @@ footer.big_pad{
     section.grid_box2{
         display: grid;
         grid-template-columns: 400px;
-        grid-template-rows: 400px 350px 80px;
+        grid-template-rows: 400px 400px 80px;
         justify-content: center;
         grid-template-areas: "img" "sec_main" "sec_foot";
     }
