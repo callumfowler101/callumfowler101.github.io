@@ -73,8 +73,8 @@ let sketch2 = (s) => {
         document.body.removeEventListener('touchmove', s.preventDefault, { passive: false });
     }
 
-    s.preventDefault = (e) => {
-        e.preventDefault();
+    s.preventDefault = (f) => {
+        f.preventDefault();
     }
 }
 

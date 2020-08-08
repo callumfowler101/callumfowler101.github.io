@@ -57,8 +57,8 @@ let sketch3 = (m) => {
         document.body.removeEventListener('touchmove', m.preventDefault, { passive: false });
     }
 
-    m.preventDefault = (e) => {
-        e.preventDefault();
+    m.preventDefault = (g) => {
+        g.preventDefault();
     }
 }
 
