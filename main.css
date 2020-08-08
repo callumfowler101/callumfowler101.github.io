@@ -200,6 +200,8 @@ section.intApp{
 div.h{
     background: black;
     grid-area: title;
+    display: flex;
+    flex-direction: row;
 }
 
 div.h h2{
@@ -209,6 +211,19 @@ div.h h2{
     text-transform: none;
     color: rgb(80,180,190);
 }
+
+div.h button{
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: rgb(80,180,190);
+}
+
+div.h button:hover{
+    color: rgb(175, 75, 65);
+}
+
+
 
 
 div.sketch{
@@ -234,7 +249,7 @@ footer.big_pad{
 
 /* Responsive Design */
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1000px){
     h1{
         text-align: center;
     }
