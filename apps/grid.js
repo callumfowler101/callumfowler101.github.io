@@ -1,6 +1,7 @@
 let sketch1 = (o) => {
     o.web_style = document.getElementById('sketch1');
     o.docSz;
+    o.refreshBut = document.getElementById('refreshGridBut')
 
     o.cells;
     o.numOfCells;
@@ -29,6 +30,20 @@ let sketch1 = (o) => {
     o.windowResized = () => {
         o.setup();
     }
+
+    o.refreshBut.addEventListener("click", ()=>{
+        o.cells = [];
+        o.numOfCells = o.floor(o.random(5,30));
+        o.cellSz = o.docSz/o.numOfCells;
+        o.cellOffset = o.cellSz*0.5;
+
+        for(let i=-2; i<o.numOfCells+2; i++){
+            for(let j=-2; j<o.numOfCells+2; j++){
+                let c = new Cell(i*o.cellSz+o.cellOffset, j*o.cellSz+o.cellOffset, o.cellSz);
+                o.cells.push(c);
+            }
+        }
+    });
 
     o.draw = () => {
         o.background(0);

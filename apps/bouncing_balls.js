@@ -1,8 +1,13 @@
 let sketch2 = (s) => {
     s.web_style = document.getElementById('sketch2');
     s.docSz;
+    s.colChange = document.getElementById('colChangeBut');
+    s.refresh = document.getElementById('refreshBallBut');
 
     s.balls;
+    s.r;
+    s.g;
+    s.b;
 
     s.setup = () => {
         s.balls = [];
@@ -12,18 +17,30 @@ let sketch2 = (s) => {
         canvas.position(s.web_style.offsetLeft+2.5, s.web_style.offsetTop);
 
         s.noStroke();
+        s.r = 200;
+        s.g = 100;
+        s.b = 80; 
     }
 
     s.windowResized = () => {
         s.setup();
     }
 
+    s.colChange.addEventListener("click", ()=>{
+        s.r=s.random(200);
+        s.g=s.random(200);
+        s.b=s.random(200);
+    });
+
+    s.refresh.addEventListener("click", ()=>{
+        s.setup();
+    });
+
     s.draw = () => {
         s.background(0);
 
         if(s.mouseX>-1 && s.mouseX<s.docSz+1 && s.mouseY>-1 && s.mouseY<s.docSz+1) s.disableScroll();
         else s.enableScroll();
-        
 
         for(let i=0; i<s.balls.length; i++){
             s.balls[i].update();
@@ -32,8 +49,11 @@ let sketch2 = (s) => {
     }
 
     s.mousePressed = () => {
-        let b = new Ball(s.mouseX, s.mouseY);
-        s.balls.push(b);
+        if(s.mouseX>0&&s.mouseX<s.width&&s.mouseY>0&&s.mouseY<s.height){
+            let b = new Ball(s.mouseX, s.mouseY);
+            s.balls.push(b);
+        }
+        
     }
 
     class Ball {
@@ -44,9 +64,9 @@ let sketch2 = (s) => {
             this.speedX = s.random(-1,1)*3;
             this.speedY = s.random(-1,1)*3;
             this.alpha = 0;
-            this.r = s.random(200,240); 
-            this.g = s.random(100,120); 
-            this.b = s.random(80,100);
+            this.r = s.random(-10,10);
+            this.g = s.random(-10,10);
+            this.b = s.random(-10,10);
         }
 
         update(){
@@ -65,7 +85,7 @@ let sketch2 = (s) => {
         }
 
         draw(){
-            s.fill(this.r, this.g, this.b, this.alpha);
+            s.fill(this.r+s.r, this.g+s.g, this.b+s.b, this.alpha);
             s.ellipse(this.x, this.y, this.sz, this.sz);
         }
     }
