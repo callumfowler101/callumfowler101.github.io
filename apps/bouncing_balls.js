@@ -20,6 +20,11 @@ let sketch2 = (s) => {
 
     s.draw = () => {
         s.background(0);
+
+        if(s.mouseX>-1 && s.mouseX<s.docSz+1 && s.mouseY>-1 && s.mouseY<s.docSz+1) s.disableScroll();
+        else s.enableScroll();
+        
+
         for(let i=0; i<s.balls.length; i++){
             s.balls[i].update();
             s.balls[i].draw();

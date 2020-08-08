@@ -29,6 +29,9 @@ let sketch3 = (m) => {
     });
 
     m.draw = () => {
+        if(m.mouseX>-1 && m.mouseX<s.docSz+1 && m.mouseY>-1 && m.mouseY<s.docSz+1) m.disableScroll();
+        else m.enableScroll();
+
         m.translate(m.width/2,m.height/2);
         let d = m.dist(m.mouseX,m.mouseY,m.pmouseX,m.pmouseY);
         let sW = m.map(d, 0, 20, 5, 0);
