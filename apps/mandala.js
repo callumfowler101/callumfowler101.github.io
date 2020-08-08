@@ -50,11 +50,11 @@ let sketch3 = (m) => {
 
 
     m.disableScroll = () => {
-        document.body.addEventListener('touchmove', o.preventDefault, { passive: false });
+        document.body.addEventListener('touchmove', m.preventDefault, { passive: false });
     }
 
     m.enableScroll = () => {
-        document.body.removeEventListener('touchmove', o.preventDefault, { passive: false });
+        document.body.removeEventListener('touchmove', m.preventDefault, { passive: false });
     }
 
     m.preventDefault = (e) => {
