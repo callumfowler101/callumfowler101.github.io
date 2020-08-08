@@ -29,7 +29,7 @@ let sketch3 = (m) => {
     });
 
     m.draw = () => {
-        if(m.mouseX>-1 && m.mouseX<s.docSz+1 && m.mouseY>-1 && m.mouseY<s.docSz+1) m.disableScroll();
+        if(m.mouseX>-1 && m.mouseX<m.docSz+1 && m.mouseY>-1 && m.mouseY<m.docSz+1) m.disableScroll();
         else m.enableScroll();
 
         m.translate(m.width/2,m.height/2);
