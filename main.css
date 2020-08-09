@@ -41,6 +41,7 @@ nav ul a:link, a:visited {
     color: black;
     padding: 10px;
     text-decoration: none;
+    transition: ease-in 0.25s;
 }
 
 nav ul a:hover {
@@ -82,6 +83,7 @@ a.main:link, a.main:visited{
     color: black;
     text-align: center;
     text-decoration: none;
+    transition: ease-in 0.25s;
 }
 
 section a.main:hover {
@@ -218,6 +220,7 @@ div.h button{
     border: none;
     font-size: 20px;
     color: rgb(80,180,190);
+    transition: ease-in 0.25s;
 }
 
 div.h button:hover{
