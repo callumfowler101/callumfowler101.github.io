@@ -27,9 +27,9 @@ let sketch2 = (s) => {
     }
 
     s.colChange.addEventListener("click", ()=>{
-        s.r=s.random(200);
-        s.g=s.random(200);
-        s.b=s.random(200);
+        s.r=s.random(20,200);
+        s.g=s.random(20,200);
+        s.b=s.random(20,200);
     });
 
     s.refresh.addEventListener("click", ()=>{
