@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constellations</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Constellations</h1>
+        <ul>
+            <li><button id="aButton" class="navigation">Aesthetics</button></li>
+            <li><button id="cButton" class="navigation">Concept</button></li>
+            <li><button id="dButton" class="navigation">Design</button></li>
+        </ul>
+    </header>
+    
+    
+
+    <div id="aud" class="audio">
+        <button id="0" class="constBut">Bandcamp</button>
+        <button id="1" class="constBut">Sound Design</button>
+        <button id="2" class="constBut">Star Maps</button>
+        <button id="3" class="constBut">Graphical Examples</button>
+        <button id="4" class="constBut">Visual Aesthetics</button>
+    </div>
+
+    <div id="con" class="concept">
+        <button id="5" class="constBut">Constellations</button>
+        <button id="6" class="constBut">Influence</button>
+        <button id="7" class="constBut">Operational Instructions</button>
+    </div>
+
+    <div id="des" class="design">
+        <button id="8" class="constBut">Previous Concepts</button>
+        <button id="9" class="constBut">Hardware</button>
+        <button id="10" class="constBut">Software</button>
+        <button id="11" class="constBut">Schematics</button>
+    </div>
+
+    
+    <div class="modal"></div>
+
+    <div class="bigbox" style="grid-template-areas: 'title title'">
+        <h2 style="grid-area: title">Bandcamp</h2>
+    </div>
+    <div class="bigbox" style="grid-template-areas: 'title title'">
+        <h2 style="grid-area: title">Sound Design</h2>
+    </div>
+    <div class="bigbox" style="grid-template-areas: 'title title' 'e1 e2'">
+        <h2 style="grid-area: title">Star Maps</h2>
+        <p style="grid-area: e1">
+            At first glance the star maps created 
+            could mistakenly be seen as just a novel interface 
+            for the user. But they also have a dual purpose. The 
+            maps generated tell a story of the exploration
+            undertaken by the user. It becomes a graphical score and, like
+            any muscial score, can be read to understand the music on a
+            deeper level.
+        </p>
+        <img src="" alt="img of star map" style="grid-area: e2;">
+    </div>
+    <div class="bigbox" style="grid-template-areas: 'title title' 'e1 e1' 'e2 e3' 'e4 e5'">
+        <h2 style="grid-area: title">Graphic Examples</h2>
+        <p style="grid-area: e1; margin: auto">These star maps were generated while creating musical examples for this project</p>
+        <img src="" alt="score1" style="grid-area: e2;">
+        <img src="" alt="score2" style="grid-area: e3;">
+        <img src="" alt="score3" style="grid-area: e4;">
+        <img src="" alt="score4" style="grid-area: e5;">
+    </div>
+    <div class="bigbox" style="grid-template-areas: 'title title'">
+        <h2 style="grid-area: title">Visual Aesthetics</h2>
+    </div>
+    <div class="bigbox" style="grid-template-areas: 'title title' 'e1 e1' 'e2 e2' 'e3 e3'">
+        <h2 style="grid-area: title">Constellations</h2>
+        <p style="grid-area: e1">
+            <em>Constellations</em> is an electronic digital instrument, designed to inspire
+            exploration and creativity. The instrument takes away many typical controls, 
+            encouraging the user to delve deep into the elements they can control.  
+        </p>
+        <iframe src="https://player.vimeo.com/video/426269798" width="640" height="376" frameborder="0" allow="autoplay;" allowfullscreen style="grid-area: e2; margin: auto;"></iframe>
+        <div style="grid-area: e3; padding: 10px"></div>
+    </div>
+    <div class="bigbox" style="grid-template-areas: 'title title'">
+        <h2 style="grid-area: title">Influence</h2>
+    </div>
+    <div class="bigbox" style="grid-template-areas: 'title title'">
+        <h2 style="grid-area: title">Operational Instructions</h2>
+    </div>
+    <div class="bigbox" style="grid-template-areas: 'title title' 'e1 e2' 'e3 e4';">
+        <h2 style="grid-area: title">Previous Concepts</h2>
+        <p style="grid-area: e1">
+            Before <em>Constellations</em> was realised this project began
+            life as an experiment to explore sound in novel ways.
+            The original concept used genetic algorithms to change
+            the sound engine parameters. The user just had to select
+            which sounds they liked and new, similar sounds would be
+            created. 
+        </p>
+        <p style="grid-area: e2">
+            From a computational point of view, this was a very
+            interesting way to navigate parameter spaces. Unfortunately 
+            it did not feel very responsive or engaging for the user.
+            Non-specialists may also feel detached from the instrument
+            as they are not aware of the underlying algorithms. For these
+            reasons the earlier concepts were dropped.
+        </p>
+        <p style="grid-area: e3">
+            Not everything was lost from the original concept as a number
+            of ideas were bought over. The technique of using genetic sequences
+            to generate audio parameters was a key concept that was implemented in the
+            final version of <em>Constellations</em>. Also other design elements such as mutating
+            and making it a sequencer were carried over. Despite <em>Constellations</em>
+            looking very different from its ancestors, it needed that evolution to grow
+            into what it is today.
+        </p>
+        <img src="img/early_concept.png" alt="Picture of early concept" style="grid-area: e4">
+    </div>
+    <div class="bigbox" style="grid-template-areas: 'title title' 'e1 e1">
+        <h2 style="grid-area: title">Hardware</h2>
+        <p style="grid-area: e1; margin: auto; padding: 10px">Hardware help from Gero</p>
+    </div>
+    <div class="bigbox" style="grid-template-areas: 'title title' 'e1 e1';">
+        <h2 style="grid-area: title">Software</h2>
+        <p style="grid-area: e1; margin: auto; padding: 10px">Languages: C++ (openFrameworks), PureData, Python</p>
+    </div>
+    <div class="bigbox" style="grid-template-areas: 'title title' 'e1 e1' 'e2 e2' ">
+        <h2 style="grid-area: title">Schematics</h2>
+        <img src="" alt="box ai file" style="grid-area: e1; width: 440px;">
+        <img src="" alt="blow design" style="grid-area: e2; width: 440px;">
+    </div>
+</body>
+
+<script src="constellation.js"></script>
+<script src="button.js"></script>
+</html>
