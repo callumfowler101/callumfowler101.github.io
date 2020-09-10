@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callum fowler - cv</title>
+    <style>
+        body{
+            background: grey;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            overflow: hidden;
+        }
+        .cv{
+            margin: auto;
+            display: block;
+            background: white;
+            color: black;
+            width: 75%;
+            height: 675px;
+            top: 100px;
+            overflow: scroll;
+        }
+        .cv * {
+            padding: none;
+            padding-left: 10px;
+            margin: 5px 5px;
+            margin-bottom: 15px;
+        }
+        .cv li{
+            list-style-type: none;
+        }
+        .center{
+            text-align: center;
+        }
+
+        .cv p a:link, :visited{
+            position: relative;
+            padding-left: 0px;
+            text-decoration: none;
+            color: black;
+            margin: 0px;
+
+        }
+        .cv p a:hover{
+            color: blue;
+        }
+
+        .projects{
+            display: grid;
+            position: relative;
+            left: -15px;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto auto auto auto;
+            grid-template-areas: 'title title''p1 p2' 'p3 p4' 'p5 p6' 'p7 p8';
+        }
+    </style>
+</head>
+<body>
+    <div class="cv">
+        <h1 class="center">Callum Fowler</h1>
+        <p class="center">
+            E: callumfowler101@gmail.com T: 07752799783 W: callumfowler101.github.io
+        </p>
+        <h2>Personal Statement</h2>
+        <p>
+            Graduate of the University of Leeds, currently studying a 
+            masters in Computational Arts at Goldsmiths, University 
+            of London. A focus in human-computer interaction, user experience and
+            audio-visual installations. Recently has been exploring generative art and
+            design. Has experience in using these interests in the fields of web and software
+            development.
+        </p>
+
+        <h2>Education</h2>
+        <li>MA Computational Arts [TBC] - Goldsmiths, University of London (2020)</li>
+        <li>BA Music [2:1] / 1st Class Dissertation - University of Leeds (2019)</li>
+        <li>Japan in Today’s World [Passed] - Kyushu University (2018)</li>
+        
+        <h2>Computer Languages/Environments/Software/Hardware</h2>
+        <p>MaxMSP, PureData, C++ [openFrameworks], Java [Processing], JavaScript [vanilla/p5js/NodeJS], HTML/CSS, XCode, 
+            Ableton, Logic Pro X, WordPress, GitHub, Raspberry Pi, Arduino</p>
+        <div class="projects">
+            <h2 style="grid-area: title;">Projects</h2>
+            <p style="grid-area: p1">
+                Constellations - A electronic instrument exploring new approaches to
+                music making, built with openFrameworks and PureData. Runs on a Raspberry
+                Pi.
+            </p>
+            <p style="grid-area: p2">
+                Solar Synth - A drone synthesiser controlled by a physics engine, built in openFrameworks.
+            </p>
+            <p style="grid-area: p3">
+                Orbs - A generative visualiser application that 
+                can be used with MIDI devices, being developed in openFrameworks.
+            </p>
+            <p style="grid-area: p4">
+                My Ecology - This project visualised different 
+                countries CO2 emissions in a series of prints made in Processing.
+            </p>
+            <p style="grid-area: p5">
+                Human and Computer - Exploring human-computer collaboration 
+                through a performance between a guitarist and a computer in MaxMSP.
+            </p>
+            <p style="grid-area: p6">
+                The Butterfly Effect - An audio visual installation 
+                built in MaxMSP, exploring chaos theory.
+            </p>
+            <p style="grid-area: p7">
+                The Happy Computer - An interactive installation enabling attendees
+                 to have a conversation with a computer in real- time, built in openFrameworks.
+            </p>
+            <p style="grid-area: p8">
+                Autonomous Instruments and Musicians - Final year dissertation at Leeds, which 
+                evaluated the roles and relationships between musicians and (semi-) autonomous instruments.
+            </p>
+        </div>
+        <h2>Portfolio</h2>
+        <p>Please see my <a href="https://callumfowler101.github.io/portfolio.html">website</a> or my <a href="https://www.instagram.com/motivated_sloth/">instagram</a> for visual portfolios.</p>
+        <h2>Interests</h2>
+        <li>
+            Musical Composition/Production: I regularly write and produce music. 
+            I am always working on personal music projects. This has recently moved 
+            to live coding in Orca and Ableton.
+        </li>
+        <li>
+            Human Interface and Interaction: Many of my projects examine how humans 
+            interface with technology. I am also very interested in how humans interact 
+            with other non-technological artefacts through their design.
+        </li>
+        <li>
+            Personal Projects: I enjoy coming up with projects and challenges 
+            to advance my skills; such as building a personal website to showcase work.
+        </li>
+        <h2>Detailed Professional Experience</h2>
+        <h3>Hanky Panky Pancakes (June 2013-2020)</h3>
+        <li>
+            Since 2013 my family have owned a restaurant in Chester, 
+            which has given me a number of experiences while helping the 
+            restaurant develop and grow.
+        </li>
+        <li>
+            Restaurant Supervisor: I predominantly worked front-of-house interacting with
+            members of the public and run shifts
+        </li>
+        <li>
+            Web Consultant: During lockdown, we had to shift our business to a delivery
+            service. I helped develop our website to be a landing page for customers to order from.
+        </li>
+        <h3>Audio Engineer (Summer 2016)</h3>
+        <li>
+            During my time in Leeds, I was able to shadow a sound engineer
+            at a well known music venue. This opportunity has been incredibly 
+            useful when setting up my own AV installations and performances.
+        </li>
+        <li>I worked with touring artists to set up the stage to their specification</li>
+        <li>
+            I learnt how to setup a safe and professional environment for the audience to
+            experience the performance
+        </li>
+
+        <p style="padding-top: 20px; position: relative; left: -15px;"><strong>References avaliable upon request.</strong></p>
+        
+    </div>
+</body>
+</html>
