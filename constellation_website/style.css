@@ -32,7 +32,13 @@ header li button.navigation {
 header li button:hover {
     color: white;
     font-size: 20px;
- }
+}
+
+div ul li{
+    text-align: left;
+    padding: 5px;
+}
+
 
 .audio button{
     position: absolute;
