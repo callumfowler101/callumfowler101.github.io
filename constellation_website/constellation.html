@@ -10,6 +10,7 @@
 <body>
     <header>
         <h1>Constellations</h1>
+        <p>Click on the nodes to discover more</p>
         <ul>
             <li><button id="aButton" class="navigation">Aesthetics</button></li>
             <li><button id="cButton" class="navigation">Concept</button></li>
@@ -23,7 +24,7 @@
         <button id="0" class="constBut">Bandcamp</button>
         <button id="1" class="constBut">Sound Design</button>
         <button id="2" class="constBut">Star Maps</button>
-        <button id="3" class="constBut">Graphical Examples</button>
+        <button id="3" class="constBut">Star Map Examples</button>
         <button id="4" class="constBut">Visual Aesthetics</button>
     </div>
 
@@ -57,13 +58,13 @@
             for the user. But they also have a dual purpose. The 
             maps generated tell a story of the exploration
             undertaken by the user. It becomes a graphical score and, like
-            any muscial score, can be read to understand the music on a
+            any musical score, can be read to understand the music on a
             deeper level.
         </p>
         <img src="" alt="img of star map" style="grid-area: e2;">
     </div>
     <div class="bigbox" style="grid-template-areas: 'title title' 'e1 e1' 'e2 e3' 'e4 e5'">
-        <h2 style="grid-area: title">Graphic Examples</h2>
+        <h2 style="grid-area: title">Star Map Examples</h2>
         <p style="grid-area: e1; margin: auto">These star maps were generated while creating musical examples for this project</p>
         <img src="" alt="score1" style="grid-area: e2;">
         <img src="" alt="score2" style="grid-area: e3;">
@@ -175,13 +176,45 @@
         </p>
         <img src="img/early_concept.png" alt="Picture of early concept" style="grid-area: e4">
     </div>
-    <div class="bigbox" style="grid-template-areas: 'title title' 'e1 e1'">
+    <div class="bigbox" style="grid-template-areas: 'title title' 'e1 e1''e2 e3''e4 e4'">
         <h2 style="grid-area: title">Hardware</h2>
-        <p style="grid-area: e1; margin: auto; padding: 10px">Hardware help from Gero</p>
+        <p style="grid-area: e1;">
+            A raspberry pi 3A+ is the brains of the operation. All of the computing comes
+            from this device, which means <em>Constellations</em> is a completely portable
+            instrument. This was a key design choice as the user is now unshackled from 
+            their computer. It also means <em>Constellations</em> can be integrated into any
+            DAW and DAW-less setup. 
+        </p>
+        <p style="grid-area: e2">
+            The touch screen is a Pimoroni Hyperpixel. It is a capacitive 60Hz display and is 
+            ideal for the synthesiser. As the user will be interacting with the instrument for 
+            a long time, it is important that the screen is has a pleasant viewing experience. 
+        </p>
+        <p style="grid-area: e3">
+            The rest of the controls given to the user are all being routed through an IO expander.
+            While the Hyperpixel is a brilliant display it does take up all of the Pi's GPIO pins.
+            For this reason I had to use an IO expander so I could run everything on the Pi.
+        </p>
+        <p style="grid-area: e4; margin: auto; padding: 10px">Case designed by Gero</p>
     </div>
-    <div class="bigbox" style="grid-template-areas: 'title title' 'e1 e1';">
+    <div class="bigbox" style="grid-template-areas: 'title title' 'e1 e1' 'e2 e3''e4 e4';">
         <h2 style="grid-area: title">Software</h2>
-        <p style="grid-area: e1; margin: auto; padding: 10px">Languages: C++ (openFrameworks), PureData, Python</p>
+        <p style="grid-area: e1">
+            A number of languages and frameworks have been used to create the software 
+            of Constellations. The heart of the project is an openFrameworks (C++) application. 
+            openFrameworks generates all of the graphics displayed to the user, and handles to OSC routing 
+            so the controls and audio engine work with the main app. 
+        </p>
+        <p style="grid-area: e2">
+            The audio engine has been built using PureData, a node based scripting language.
+            The engine is built using phase modulation techniques. This technique enables the 
+            synth to create a multitude of different timbres.   
+        </p>
+        <p style="grid-area: e3">
+            Python has been used to programme the hardware controls. All data is being sent using
+            OSC which is ideal for cross language/app data transfers.
+        </p>
+        <p style="grid-area: e4; margin: auto; padding: 10px">Languages: C++ (openFrameworks), PureData, Python</p>
     </div>
     <div class="bigbox" style="grid-template-areas: 'title title' 'e1 e1' 'e2 e2' ">
         <h2 style="grid-area: title">Schematics</h2>
