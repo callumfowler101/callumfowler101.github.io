@@ -16,7 +16,7 @@ header ul{
     list-style-type: none;
 }
 
-header li{
+header ul li{
     margin: auto;
     margin-left: 10%;
 }
@@ -122,9 +122,17 @@ div ul li{
 }
 
 @media screen and (max-width: 600px){
+    header ul li {
+        margin-left: -5%;
+    }
     .bigbox{
         width: 400px;
         margin-left: -200px;
+    }
+
+    .constBut{
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     .bigbox img{
