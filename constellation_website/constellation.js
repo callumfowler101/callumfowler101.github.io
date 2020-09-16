@@ -1,10 +1,11 @@
+// p5 sketch to generate website star maps.
 let sketch = (a) => {
     const aBut = document.getElementById('aButton');
     const cBut = document.getElementById('cButton');
     const dBut = document.getElementById('dButton');
 
     const modalObj = document.querySelector('.modal'); 
-
+    // The number of elements (nodes) drawn is determined by the number of buttons in that area.
     let elements = document.querySelectorAll('.concept button');
     let selNode;
     let nodes = [];
@@ -31,10 +32,11 @@ let sketch = (a) => {
         a.strokeWeight(7);
         
     }
+    // A new star map is generated when the window is resized or a new area button is clicked.
     a.windowResized = () => {
         a.setup();
     }
-
+    
     aBut.addEventListener('click', ()=>{
         if(selNode!=null)nodes[selNode].element.style.display = 'none';
         elements = document.querySelectorAll('.audio button');
@@ -71,6 +73,7 @@ let sketch = (a) => {
     }
 
     checkMouse = (i) => {
+        // This function checks if the mouse is hovering over a node
         let x = a.mouseX;
         let y = a.mouseY;
         let offset = 20;
@@ -111,6 +114,7 @@ let sketch = (a) => {
         }
         draw(){
             if(this.show&&!modalObj.classList.contains('open')){
+                // If the mouse is hovering over a node it displays the title of the section.
                 a.stroke(col2)
                 a.fill(col2)
                 a.ellipse(this.x, this.y, this.sz*1.7, this.sz*1.7);
@@ -127,5 +131,5 @@ let sketch = (a) => {
         }
     }
 }
-
+// Creates an instance of the sketch.
 let s = new p5(sketch);

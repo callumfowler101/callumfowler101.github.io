@@ -1,3 +1,5 @@
+<!-- HTML website to document Constellations. Hosted on GitHub -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +11,7 @@
 </head>
 <body>
     <header>
+        <!-- Header containing title, introduction, and navigation -->
         <h1>Constellations</h1>
         <p>This website is digital documentation for the <em>Consetllations</em> synthesiser.
             Click on the nodes to discover more</p>
@@ -20,7 +23,7 @@
     </header>
     
     
-
+    <!-- Buttons that make up the nodes -->
     <div id="aud" class="audio">
         <button id="0" class="constBut">Audio Recordings</button>
         <button id="1" class="constBut">Sound Design</button>
@@ -41,8 +44,10 @@
         <button id="10" class="constBut">Schematics</button>
     </div>
     
+    <!-- Modal div to create a fade effect when bigbox is open -->
     <div class="modal"></div>
 
+    <!-- A bigbox for every section on the website -->
     <div class="bigbox" style="grid-template-areas: 'title title' 'e1 e1' 'e2 e2'">
         <h2 style="grid-area: title">Audio Recordings</h2>
         <p style="grid-area: e1">A series of audio recordings were created to explore the sounds of <em>Constellations</em>. 
