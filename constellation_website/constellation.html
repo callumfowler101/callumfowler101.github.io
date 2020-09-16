@@ -10,7 +10,8 @@
 <body>
     <header>
         <h1>Constellations</h1>
-        <p>Click on the nodes to discover more</p>
+        <p>This website is digital documentation for the <em>Consetllations</em> synthesiser.
+            Click on the nodes to discover more</p>
         <ul>
             <li><button id="aButton" class="navigation">Aesthetics</button></li>
             <li><button id="cButton" class="navigation">Concept</button></li>
@@ -23,31 +24,35 @@
     <div id="aud" class="audio">
         <button id="0" class="constBut">Audio Recordings</button>
         <button id="1" class="constBut">Sound Design</button>
-        <button id="2" class="constBut">Star Maps</button>
-        <button id="3" class="constBut">Star Map Examples</button>
-        <button id="4" class="constBut">Visual Aesthetics</button>
+        <button id="2" class="constBut">Star Map Examples</button>
+        <button id="3" class="constBut">Visual Aesthetics</button>
     </div>
 
     <div id="con" class="concept">
-        <button id="5" class="constBut">Constellations</button>
-        <button id="6" class="constBut">Influence</button>
-        <button id="7" class="constBut">Operational Instructions</button>
+        <button id="4" class="constBut">Constellations</button>
+        <button id="5" class="constBut">Influence</button>
+        <button id="6" class="constBut">Operational Instructions</button>
     </div>
 
     <div id="des" class="design">
-        <button id="8" class="constBut">Previous Concepts</button>
-        <button id="9" class="constBut">Hardware</button>
-        <button id="10" class="constBut">Software</button>
-        <button id="11" class="constBut">Schematics</button>
+        <button id="7" class="constBut">Previous Concepts</button>
+        <button id="8" class="constBut">Hardware</button>
+        <button id="9" class="constBut">Software</button>
+        <button id="10" class="constBut">Schematics</button>
     </div>
-
     
     <div class="modal"></div>
 
-    <div class="bigbox" style="grid-template-areas: 'title title'">
+    <div class="bigbox" style="grid-template-areas: 'title title' 'e1 e1' 'e2 e2'">
         <h2 style="grid-area: title">Audio Recordings</h2>
+        <p style="grid-area: e1">A series of audio recordings were created to explore the sounds of <em>Constellations</em>. 
+            Click the image below to hear the EP on Bandcamp.
+        </p>
+        <a href="https://callumfowler101.bandcamp.com/album/constellations" style="grid-area: e2">
+            <img src="img/constellations_artwork.png" alt="constellations_artwork">
+        </a>
     </div>
-    <div class="bigbox" style="grid-template-areas: 'title title' 'e1 e1'">
+    <div class="bigbox" style="grid-template-areas: 'title title' 'e1 e1' 'e2 e2'">
         <h2 style="grid-area: title">Sound Design</h2>
         <p style="grid-area: e1">
             At the center of the audio engine is a phase modulation algorithm.
@@ -59,19 +64,7 @@
             user given the ability to mutate timbres, they have a vast amount of sounds
             in their palms.
         </p>
-    </div>
-    <div class="bigbox" style="grid-template-areas: 'title title' 'e1 e2'">
-        <h2 style="grid-area: title">Star Maps</h2>
-        <p style="grid-area: e1">
-            At first glance the star maps created 
-            could mistakenly be seen as just a novel interface 
-            for the user. But they also have a dual purpose. The 
-            maps generated tell a story of the exploration
-            undertaken by the user. It becomes a graphical score and, like
-            any musical score, can be read to understand the music on a
-            deeper level.
-        </p>
-        <img src="img/const5.png" alt="img of star map" style="grid-area: e2;">
+        <img style="grid-area: e2"src="img/pd.png" alt="image of pd">
     </div>
     <div class="bigbox" style="grid-template-areas: 'title title' 'e1 e1' 'e2 e3' 'e4 e5' 'e6 e6'; height: 600px; overflow: scroll;">
         <h2 style="grid-area: title">Star Map Examples</h2>
@@ -79,10 +72,10 @@
         <img src="img/const1.png" alt="score1" style="grid-area: e2;">
         <img src="img/const2.png" alt="score2" style="grid-area: e3;">
         <img src="img/const3.png" alt="score3" style="grid-area: e4;">
-        <img src="img/const4.png" alt="score4" style="grid-area: e5;">
+        <img src="img/const5.png" alt="score4" style="grid-area: e5;">
         <div style="grid-area: e6; height: 25px"></div>
     </div>
-    <div class="bigbox" style="grid-template-areas: 'title title' 'e1 e1'">
+    <div class="bigbox" style="grid-template-areas: 'title title' 'e1 e1' 'e2 e2' 'e3 e3' 'e4 e4'; height: 600px; overflow: scroll;">
         <h2 style="grid-area: title">Visual Aesthetics</h2>
         <p style="grid-area: e1">
             The name, sounds, and visuals of <em>Constellations</em> are all designed
@@ -95,6 +88,17 @@
             ownership with the user, encouraging them to work through their session to create a compelling
             composition.  
         </p>
+        <img src="img/const4.png" alt="img of star map" style="grid-area: e2;">
+        <p style="grid-area: e3">
+            At first glance the star maps created 
+            could mistakenly be seen as just a novel interface 
+            for the user. But they also have a dual purpose. The 
+            maps generated tell a story of the exploration
+            undertaken by the user. It becomes a graphical score and, like
+            any musical score, can be read to understand the music on a
+            deeper level.
+        </p>
+        <div style="grid-area: e4; padding: 10px"></div>
     </div>
     <div class="bigbox" style="grid-template-areas: 'title title' 'e1 e1' 'e2 e2' 'e3 e3'">
         <h2 style="grid-area: title">Constellations</h2>
@@ -106,7 +110,7 @@
         <iframe src="https://player.vimeo.com/video/458101770" width="95%" height="376" frameborder="0" allow="autoplay;" allowfullscreen style="grid-area: e2; margin: auto;"></iframe>
         <div style="grid-area: e3; padding: 10px"></div>
     </div>
-    <div class="bigbox" style="grid-template-areas: 'title title' 'e1 e2'">
+    <div class="bigbox" style="grid-template-areas: 'title title' 'e1 e2'; height: 600px; overflow: scroll;">
         <h2 style="grid-area: title">Influence</h2>
         <p style="grid-area: e1">
             This work was heavily inspired by <a href="https://www.hz-journal.org/n9/herber.html">Norbert Herber's idea of "The Composition Instrument"</a>.
@@ -119,7 +123,15 @@
         <p style="grid-area: e2">
             Another field of research that heavily inspired this piece was genetic algorithms,
             specifically their use in navigating parameter spaces on digital instruments. 
-               
+            Matthew Yee-King's research on his <a href="http://www.yeeking.net/evosynth/">EvoSynth</a>,
+            showed the potential of using genetic algorithms in to control synthesiser parameters. Work
+            undertaken by <a href="https://www.semanticscholar.org/paper/Creating-and-Exploring-Huge-Parameter-Spaces%3A-as-a-Dahlstedt/d99145b134d742b651e0df095ce05ee9ac6979aa?p2df">Dahlstedt</a>
+            and <a href="https://dl.acm.org/doi/10.1145/2576768.2598303">Marcet and Pasquier</a> also further reinforced the use of genetic algorithms
+            to control synthesisers. A common idea across all of these projects was removing the stress that may
+            come from controlling synths with a lot of parameters, while still creating complex timbres that require
+            a vast amount of controls. This became a crucial component of <em>Constellations</em>. By removing individual
+            control of each parameter the user is forced to use the presets and mutate them. This then allows them to focus
+            on composing rather than worrying about the fine tuning each dial to get the correct timbre.
         </p>
     </div>
     <div class="bigbox" style="grid-template-areas: 'title title' 'e1 e1' 'e2 e3' 'e4 e4' 'e5 e6'; height: 600px; overflow: scroll;">
@@ -178,9 +190,7 @@
                 <li>Button 4: Shut down</li>
             </ul>
         </div>
-        <div style="grid-area: e6;">
-
-        </div>
+        <div style="grid-area: e6;"></div>
     </div>
     <div class="bigbox over-scroll" style="grid-template-areas: 'title title' 'e1 e2' 'e3 e4';">
         <h2 style="grid-area: title">Previous Concepts</h2>
