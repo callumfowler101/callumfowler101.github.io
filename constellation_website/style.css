@@ -139,6 +139,11 @@ div ul li{
     cursor: pointer;
 }
 
+.over-scroll{
+    height: 600px;
+    overflow: scroll;
+}
+
 @media screen and (max-width: 600px){
     header ul li {
         margin-left: -5%;
@@ -158,8 +163,4 @@ div ul li{
         height: 150px;
     }
 
-    .over-scroll{
-        height: 600px;
-        overflow: scroll;
-    }
 }
