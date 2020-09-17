@@ -100,7 +100,6 @@ section a.main:hover {
 
 /* Image Carousel on Home */
 .carousel{
-    display: none;
     width: 400px;
     margin: auto;
     text-align: center;
